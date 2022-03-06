@@ -3,7 +3,10 @@ import { Outlet } from "react-router";
 import { ROUTES } from "../../utils/routes";
 import MenuBar from "../../containers/menu-bar";
 import Images from "../../assets";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
+import TopBar from "../../containers/top-bar";
+import BottomBar from "../../containers/bottom-bar";
+import { Fragment } from "react";
 
 const interior_links = [
   {
@@ -23,7 +26,8 @@ const interior_links = [
 const RealState = () => {
 
   return (
-    <div>
+    <Fragment>
+      <TopBar />
       <MenuBar links={interior_links} />   
       <ContentContainer>
         <div className="vertical">
@@ -34,7 +38,8 @@ const RealState = () => {
         <Outlet />
         <div className="vertical" />
       </ContentContainer>
-    </div>
+      <BottomBar />
+    </Fragment>
   )
 };
 

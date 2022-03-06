@@ -1,7 +1,12 @@
+import { useParams } from "react-router-dom";
+
 const InteriorDetail = () => {
+  const { projectId } = useParams();
+
+
   return (
     <div>
-      detail
+      detail: {projectId}
     </div>  
   );
 };

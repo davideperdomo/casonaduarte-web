@@ -8,6 +8,7 @@ const TopBar = () => {
     <TopBarContainer>
       <Link to={ROUTES.home}>
         <img src={Images.logo} alt="logo" />
+        {/*<p>casona <b>duarte</b></p>*/}
       </Link>
     </TopBarContainer>
   )
@@ -19,6 +20,11 @@ const TopBarContainer = styled.div`
 
   img {
     height: 50px;
+  }
+
+  p {
+    font-size: 3em;
+    margin: 1px;
   }
 `;
 

@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: "CenturyGothic";
   font-size: 14px;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -11,3 +12,35 @@ body {
   height: 100%;
   width: 100%;
 }
+
+/*
+  FONT IMPORTS
+*/
+@font-face {
+  font-family: "CenturyGothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./assets/fonts/century-gothic/Century_Gothic.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "CenturyGothic";
+  font-style: italic;
+  font-weight: 400;
+  src: url(./assets/fonts/century-gothic/Century_Gothic_Italic.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "CenturyGothic";
+  font-style: normal;
+  font-weight: 600;
+  src: url(./assets/fonts/century-gothic/Century_Gothic_Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "CenturyGothic";
+  font-style: italic;
+  font-weight: 600;
+  src: url(./assets/fonts/century-gothic/Century_Gothic_Bold_Italic.otf) format("opentype");
+}
+

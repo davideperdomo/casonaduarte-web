@@ -4,6 +4,9 @@ import styled from "styled-components";
 import Images from "../../assets";
 import MenuBar from "../../containers/menu-bar";
 import { ROUTES } from "../../utils/routes";
+import TopBar from "../../containers/top-bar";
+import BottomBar from "../../containers/bottom-bar";
+import { Fragment } from "react";
 
 const interior_links = [
   {
@@ -27,7 +30,8 @@ const interior_links = [
 const InteriorDesign = () => {
 
   return (
-    <div>
+    <Fragment>
+      <TopBar />
       <MenuBar links={interior_links} />
       <ContentContainer>
         <div className="vertical">
@@ -35,13 +39,14 @@ const InteriorDesign = () => {
             <img 
               src={Images.interior_vertical} 
               alt="interior-vertical" 
-            />
+              />
           </Link>
         </div>
         <Outlet />
         <div className="vertical" />
       </ContentContainer>
-    </div>
+      <BottomBar />
+    </Fragment>
   )
 };
 

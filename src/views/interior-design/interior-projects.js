@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { getProjectsList } from "../../services/data";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { getProjectsList } from "../../services/data";
 
 const InteriorProjects = () => {
   const [projects, setProjects] = useState();
@@ -26,9 +27,9 @@ const InteriorProjects = () => {
           { !isLoading &&
             projects &&
             projects.map( (itm, idx) => {
-              return <div className="project-card">
+              return <Link className="project-card" to={`${itm?.data?.name}`}>
                 <img src={itm?.data?.imageUrl} key={`project-${idx}`} alt="project" />
-              </div>
+              </Link>
             })
           }
         </div>

@@ -25,6 +25,8 @@ const MenuContainer = styled.div`
 
   a {
     text-decoration: none;
+    font-weight: 600;
+    color: black;
   }
 `;
 
