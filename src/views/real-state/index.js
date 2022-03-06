@@ -12,6 +12,10 @@ const interior_links = [
   },
   {
     route: "contact",
+    label: "ACERCA DE NOSOTROS"
+  },
+  {
+    route: "contact",
     label: "CONTACTO"
   }
 ]
@@ -28,6 +32,7 @@ const RealState = () => {
           </Link>
         </div>
         <Outlet />
+        <div className="vertical" />
       </ContentContainer>
     </div>
   )
@@ -35,7 +40,9 @@ const RealState = () => {
 
 const ContentContainer = styled.div`
   display: flex;
-  
+  justify-content: space-between;
+  min-height: 80vh;
+
   .vertical {
     width: 30px;
     display: flex;

@@ -29,6 +29,7 @@ function App() {
           <Route path={ROUTES.real_state_projects} element={<RealStateProjects />} />
           <Route path={"contact"} element={<Contact />} />
         </Route>
+        <Route path={ROUTES.contact} element={<Contact />} />
       </Routes>
       <BottomBar />
     </BrowserRouter>

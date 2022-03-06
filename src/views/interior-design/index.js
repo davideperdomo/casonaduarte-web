@@ -39,7 +39,7 @@ const InteriorDesign = () => {
           </Link>
         </div>
         <Outlet />
-        <div className="vertical">.</div>
+        <div className="vertical" />
       </ContentContainer>
     </div>
   )
@@ -48,11 +48,17 @@ const InteriorDesign = () => {
 const ContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  min-height: 80vh;
 
   .vertical {
     width: 30px;
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    a {
+      height: fit-content;
+    }
 
     img {
       width: 20px;

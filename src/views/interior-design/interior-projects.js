@@ -41,7 +41,7 @@ const ProjectsContainer = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding-top: 2em;
+  padding-top: 1em;
   justify-content: center;
   width: 100%;
 
