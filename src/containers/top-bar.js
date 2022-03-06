@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import Images from "../assets";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../utils/routes"
 
 const TopBar = () => {
   return (
     <TopBarContainer>
-      <img src={Images.logo} alt="logo" />
+      <Link to={ROUTES.home}>
+        <img src={Images.logo} alt="logo" />
+      </Link>
     </TopBarContainer>
   )
 };

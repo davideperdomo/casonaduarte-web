@@ -11,7 +11,10 @@ const BottomBar = () => {
 
 const BottomBarContainer = styled.div`
   text-align: center;
-
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  
   img {
     height: 50px;
   }
