@@ -27,8 +27,13 @@ const InteriorProjects = () => {
           { !isLoading &&
             projects &&
             projects.map( (itm, idx) => {
-              return <Link className="project-card" to={`${itm?.data?.name}`}>
-                <img src={itm?.data?.imageUrl} key={`project-${idx}`} alt="project" />
+              return <Link 
+                key={`project-${idx}`} 
+                className="project-card" 
+                to={`${itm?.data?.name}`}
+                state={{ data: itm?.data }}
+              >
+                <img src={itm?.data?.imageUrl} alt="project" />
               </Link>
             })
           }

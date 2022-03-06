@@ -1,12 +1,12 @@
+import { Fragment } from "react";
 import { Outlet } from "react-router";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Images from "../../assets";
-import MenuBar from "../../containers/menu-bar";
-import { ROUTES } from "../../utils/routes";
-import TopBar from "../../containers/top-bar";
 import BottomBar from "../../containers/bottom-bar";
-import { Fragment } from "react";
+import MenuBar from "../../containers/menu-bar";
+import TopBar from "../../containers/top-bar";
+import { ROUTES } from "../../utils/routes";
 
 const interior_links = [
   {
