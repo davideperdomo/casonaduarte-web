@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "casonaduarte-56346"
+  },
+  "targets": {
+    "casonaduarte-56346": {
+      "hosting": {
+        "web": [
+          "casonaduarte"
+        ]
+      }
+    }
   }
 }

@@ -1,12 +1,10 @@
 import emailjs from "@emailjs/browser";
 import { Fragment, useRef } from "react";
-import Card from "../containers/card";
-
-const EMAIL_CONFIG = {
-  SERVICE_ID: "service_kwx1izw",
-  TEMPLATE_ID: "template_n6nfcjo",
-  USER_ID: "zplRVMn8pd2byUO1M"
-};
+import { useLocation } from "react-router";
+import styled from "styled-components";
+import { FormInput } from "../../components/form";
+import Card from "../../containers/card";
+import { EMAIL_CONFIG } from "../../helpers/email";
 
 const FORM_SCHEMA = {
   name: {
@@ -28,17 +26,11 @@ const FORM_SCHEMA = {
   }
 };
 
-const FormInput = ({ inputType = "input", ...props }) => {
-  const inputTypes = {
-    input: <input {...props} />,
-    textArea: <textarea {...props}/>
-  }
-  console.log("type", inputTypes.input, inputTypes[inputType]);
-  return ( inputTypes[inputType] ?? <textarea /> );
-}
-
-const Contact = () => {
+const ContactForm = () => {
   const form = useRef();
+  const { pathname } = useLocation();
+  const pathValues = pathname.split("/")
+  const messageType = (pathValues.length > 0) ? pathValues[1] : "";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,7 +38,7 @@ const Contact = () => {
     emailjs.sendForm(
       EMAIL_CONFIG.SERVICE_ID, 
       EMAIL_CONFIG.TEMPLATE_ID, 
-      form.current, 
+      { ...form.current, messageType }, 
       EMAIL_CONFIG.USER_ID
     )
       .then((result) => {
@@ -58,9 +50,9 @@ const Contact = () => {
 
   return (
     <Fragment>
-      <div>
+      <ContactFormContainer>
         <Card>
-        <span className="material-icons-round">
+        <span class="material-icons-round">
           place
         </span><p>Calle Floridablanca,134,local 2
             08011 Barcelona
@@ -78,7 +70,6 @@ const Contact = () => {
                     type="text" 
                     id={key} 
                     name={key} 
-                    //value={value.placeholder} 
                   /><br/>
                 </Fragment> 
               })   
@@ -86,16 +77,14 @@ const Contact = () => {
             <input type="submit" value="Submit" />
           </form> 
         </Card>
-      </div>
+      </ContactFormContainer>
     </Fragment>
   )
 };
 
-/**
- * 
-          <label for="fname">First name:</label><br />
-          <input type="text" id="fname" name="fname" value="John" /><br/>
-          <label for="lname">Last name:</label><br />
-          <input type="text" id="lname" name="lname" value="Doe" /><br/><br/>
- */
-export default Contact;
+const ContactFormContainer = styled.div`
+    padding: 1em;
+    padding-top: 2em;
+`;
+
+export default ContactForm;

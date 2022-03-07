@@ -20,11 +20,12 @@ const Home = () => {
       <Link to={ROUTES.interior_design}>
         <div className="interior">
           <AnimatedLine
-            animate={{ height: "200px" }}
+            animate={{ height: "40vh" }}
             transition={{ duration: 2 }}
           />
-          <p className="animated-text" >interior</p>
-          <p>interiorisme</p>
+          <p className="animated-text" >Interior</p>
+          <p className="rotation">Design</p>
+          <p>Interiorisme</p>
         </div>
       </Link>
       <Link to={ROUTES.real_state}>
@@ -39,8 +40,8 @@ const Home = () => {
       </Link>
       <Link to={ROUTES.real_state}>
         <div className="real-state">
-          <p>inmobiliaria</p>
-          <p>immobiliària</p>
+          <p>Inmobiliaria</p>
+          <p>Immobiliària</p>
           <AnimatedLine
             id="inm-line"
             animate={{ height: "250px" }}
@@ -99,6 +100,13 @@ const HomeContainer = styled.div`
       margin-top: -50px;
       margin-left: -3px;
     }
+
+    .rotation {
+      transform: rotate(-90deg);
+      position: absolute;
+      margin-left: 110px;
+      margin-top: -128px;
+    }
   }
 
   .real-state {
@@ -117,9 +125,10 @@ const HomeContainer = styled.div`
   .logo-alt {
     bottom: 0;
     position: fixed;
-    width: 200px;
+    width: 130px;
     left: 50%;
-    margin-left: -100px;
+    margin-left: -65px;
+    margin-bottom: 5px;
   }
 
   #realstate-line {
@@ -128,7 +137,7 @@ const HomeContainer = styled.div`
   }
 
   #inm-line {
-    margin-left: 97px;
+    margin-left: 98px;
     margin-top: -39px;
   }
 `;
