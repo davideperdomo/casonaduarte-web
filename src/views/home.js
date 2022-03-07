@@ -61,7 +61,7 @@ const AnimatedLine = styled(motion.div)`
 
 const CasonaLogo = styled.div`
   position: fixed;
-  width: 100vw;
+  width: 100%;
   text-align: center;
 
   p {
@@ -139,6 +139,41 @@ const HomeContainer = styled.div`
   #inm-line {
     margin-left: 98px;
     margin-top: -39px;
+  }
+
+  @media (max-width: 720px){  
+    p {
+      font-size: 40px;
+    }
+
+    .interior {
+      right: 44vw;
+      .animated-text {
+        margin-top: -40px;
+      }
+    }
+
+    .real-state {
+      left: 40vw;
+    }
+
+    #realstate-line {
+      margin-left: 151px;
+      margin-bottom: -30px;
+    }
+
+    #inm-line {
+      margin-left: 78px;
+      margin-top: -34px;
+    }
+
+    .logo-line {
+      margin-left: 34px;
+    }
+
+    #line-2 {    
+      margin-left: 108px;
+    }
   }
 `;
 
