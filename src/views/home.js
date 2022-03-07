@@ -173,6 +173,11 @@ const HomeContainer = styled.div`
 
     #line-2 {    
       margin-left: 108px;
+      display: none;
+    }
+
+    .alt {
+      display: none;
     }
   }
 `;

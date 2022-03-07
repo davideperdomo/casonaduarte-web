@@ -4,14 +4,14 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const MenuBar = ({ links }) => {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(true);
 
   const getNavigationLinks = () => 
     links.map( (itm, idx) => 
       <Link 
         key={`link-${idx}`} 
         to={itm.route} 
-        onClick={()=>setOpenMenu(!openMenu)}
+        onClick={()=>setOpenMenu(false)}
       >
         {itm.label}
       </Link>
@@ -43,7 +43,7 @@ const MenuBar = ({ links }) => {
 };
 
 const MenuResponsive = styled(motion.div)`
-  display: none;
+  display: none !important;
   position: fixed;
   background-color: white;
   width: 1px;
@@ -66,12 +66,11 @@ const MenuResponsive = styled(motion.div)`
   };
 
   @media (max-width: 720px){
-    display: block;
-
+    display: block !important;
+    
     a {
       margin: 6px 0;
     }
-
   };
 `;
 
@@ -102,6 +101,10 @@ const MenuContainer = styled.div`
     -webkit-box-shadow: 0px 0px 1px 0px;
     -moz-box-shadow: 0px 0px 1px 0px;
     box-shadow: 0px 0px 1px 0px;
+
+    span {
+      font-size: 30px;
+    }
   };
 
 

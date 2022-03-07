@@ -34,8 +34,14 @@ const InteriorDetail = () => {
 
 const ProjectDetail = styled.div`
   display: flex;
-  width: 90%;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 1em;
 
+  img {
+    width: 100%;
+  }
+  
   .project-content {
     padding: 1em;
   }

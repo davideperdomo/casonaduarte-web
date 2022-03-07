@@ -17,6 +17,19 @@ const InteriorHomeContainer = styled.div`
 	img {
 		width: 100%;
 	}
+
+  @media (max-width: 720px) {
+    padding-top: 1em;
+    width: 90%;
+    text-align: center;
+    overflow: hidden;
+
+    img {
+      left: 100%;
+      margin-left: -150%;
+      width: auto;
+    }
+  }
 `;
 
 export default InteriorHome;
